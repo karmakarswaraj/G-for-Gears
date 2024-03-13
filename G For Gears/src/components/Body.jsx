@@ -1,13 +1,13 @@
 import React from "react";
-import Categories from "./Categories";
-import Featured from "./Featured";
-import Hero from "./Hero";
-import OnSale from "./OnSale";
+import Categories from "./BodyComponent/Categories";
+import Featured from "./BodyComponent/Featured";
+import CarouselItem from "./BodyComponent/CarouselItem";
+import OnSale from "./BodyComponent/OnSale";
 
 function Body() {
   return (
     <>
-      <Hero />
+      <CarouselItem />
       <Categories />
       <OnSale />
       <Featured />

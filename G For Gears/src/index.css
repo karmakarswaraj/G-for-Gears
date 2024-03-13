@@ -1,3 +1,72 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+body{
+  background: #242424;
+}
+.carousel {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.carousel-sales-banner {
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  text-align: center;
+}
+
+.carousel-slides {
+  flex: 1;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-slide {
+  width: 100vw;
+  transform: translateX(100px);
+  transition: transform 0.5s ease-in-out;
+  opacity: 0;
+  height: 70vh;
+  padding-right: 1vw;
+}
+
+.carousel-slide.active {
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(0);
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.carousel-button.carousel-button-prev {
+  left: 0;
+}
+
+.carousel-button.carousel-button-next {
+  right: 0;
+}
+.carousel-item img {
+  object-fit: fill;
+}
