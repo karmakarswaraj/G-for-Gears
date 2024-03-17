@@ -1,6 +1,7 @@
 import React from "react";
 
-function Cards({ index, product }) { // Destructure props here
+function Cards({ index, product }) {
+  // Destructure props here
   return (
     <div
       key={index}
@@ -42,8 +43,15 @@ function Cards({ index, product }) { // Destructure props here
         </span>
       </div>
       <div className="flex justify-between mt-4">
-        <button className="text-gray-500 hover:text-red-500" onMouseEnter={(e) => { e.target.style.color = '#C2410C'; }} // Change color on hover
-  onMouseLeave={(e) => { e.target.style.color = '#ffffff'; }} >
+        <button
+          className="text-gray-500 hover:text-red-500"
+          onMouseEnter={(e) => {
+            e.target.style.color = "#C2410C";
+          }} // Change color on hover
+          onMouseLeave={(e) => {
+            e.target.style.color = "#ffffff";
+          }}
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -51,7 +59,6 @@ function Cards({ index, product }) { // Destructure props here
             height="28"
             color="#ffffff"
             fill="none"
-            
           >
             <path
               d="M12 21C10.6588 21 9.88572 20.4278 8.33953 19.2834C0.221721 13.2749 1.01807 6.15294 4.53744 3.99415C7.21909 2.34923 9.55962 3.01211 10.9656 4.06801C11.5422 4.50096 11.8304 4.71743 12 4.71743C12.1696 4.71743 12.4578 4.50096 13.0344 4.06801C14.4404 3.01211 16.7809 2.34923 19.4626 3.99415C21.1812 5.04838 22.2505 7.28623 21.9494 10"

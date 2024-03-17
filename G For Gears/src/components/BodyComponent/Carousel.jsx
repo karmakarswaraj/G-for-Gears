@@ -40,7 +40,8 @@ const Carousel = ({ slides, interval }) => {
                 <img
                   src={slide.src}
                   alt={slide.alt}
-                  style={{ display: "block", margin: "0 auto" }}
+                  style={{ display: "block" }}
+                  className="w-full"
                 /> // Center image
               ) : (
                 <div dangerouslySetInnerHTML={{ __html: slide.content }} />

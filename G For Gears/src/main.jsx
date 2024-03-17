@@ -4,7 +4,7 @@ import App from "./App.jsx";
 import "./index.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Body from "./components/Body.jsx";
-
+import Rental from "./components/RentalCard.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -14,10 +14,10 @@ const router = createBrowserRouter([
         path: "/",
         element: <Body />,
       },
-      // {
-      //   path: "/shop",
-      //   element: <Rent />,
-      // },
+      {
+        path: "/rent",
+        element: <Rental />,
+      },
       // {
       //   path: "/about",
       //   element: <Collection />,
