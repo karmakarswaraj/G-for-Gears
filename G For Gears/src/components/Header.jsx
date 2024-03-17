@@ -1,14 +1,15 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import Logo from "../assets/Logo.png";
+
 export default function Header() {
   return (
     <header className="sticky top-0 z-50 shadow">
-      <nav className=" border-gray-200 px-4 lg:px-6 py-2.5" style = {{ backgroundColor: "#242424"}}>
+      <nav className="border-gray-200 px-4 lg:px-6 py-2.5 bg-gray-900">
         <div className="flex flex-wrap items-center justify-between max-w-screen-xl mx-auto">
           <Link to="/" className="flex items-center">
             <img
-            style={{height: "50px", width: "50px", filter: "invert(100%)"}}
+              style={{ height: "50px", width: "50px", filter: "invert(100%)" }}
               src={Logo}
               className="h-12 mr-3"
               alt="Logo"
@@ -17,13 +18,13 @@ export default function Header() {
           <div className="flex items-center lg:order-2">
             <Link
               to="#"
-              className="text-white hover:bg-black  font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none"
+              className="text-white hover:bg-black font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none"
             >
               Log In
             </Link>
             <Link
               to="#"
-              className="text-white bg-orange-700 hover:bg-orange-800  font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none"
+              className="text-white bg-orange-700 hover:bg-orange-800 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none"
             >
               Sign Up
             </Link>
@@ -57,7 +58,7 @@ export default function Header() {
                   Rent
                 </NavLink>
               </li>
-              <li>
+              <li className="relative">
                 <NavLink
                   to="/collection"
                   className={({ isActive }) =>
@@ -68,8 +69,8 @@ export default function Header() {
                 >
                   Collection
                 </NavLink>
+                
               </li>
-              
             </ul>
           </div>
         </div>

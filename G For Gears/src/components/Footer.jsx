@@ -76,7 +76,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="px-1 py-1 text-white bg-gray-900">
+    <footer className="px-1 py-1 text-white bg-gray-900 ">
       <div className="container flex flex-wrap items-center justify-between mx-auto">
         <div className="flex items-center">
           <span className="mr-4 text-xl font-bold">G For Gears</span>

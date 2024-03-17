@@ -4,7 +4,8 @@ import App from "./App.jsx";
 import "./index.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Body from "./components/Body.jsx";
-import Rental from "./components/RentalCard.jsx";
+import Rental from "./components/Rental.jsx";
+import Collection from "./components/Collection.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -18,10 +19,10 @@ const router = createBrowserRouter([
         path: "/rent",
         element: <Rental />,
       },
-      // {
-      //   path: "/about",
-      //   element: <Collection />,
-      // },
+      {
+        path: "/collection",
+        element: <Collection />,
+      },
     ],
   },
 ]);
