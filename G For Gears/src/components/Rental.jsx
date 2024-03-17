@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import RCardComp from "../components/BodyComponent/RCardComp"; // Import the Card component
 import { nanoid } from "nanoid";
-
+import shoeImg2 from "../assets/shoes2.png";
 const Rental = () => {
   const [products, setProducts] = useState([
     {
       id: nanoid(),
-      img: "",
+      img: shoeImg2,
       name: "Scooter",
       description: "A convenient way to get around town",
       category: "scooters",
@@ -16,7 +16,7 @@ const Rental = () => {
     },
     {
       id: nanoid(),
-      img: "",
+      img: shoeImg2,
       name: "Rollerblades",
       description: "Experience the thrill of gliding",
       category: "skates",
@@ -26,7 +26,7 @@ const Rental = () => {
     },
     {
       id: nanoid(),
-      img: "",
+      img: shoeImg2,
       name: "Kayak",
       description: "Explore the waters with ease",
       category: "boats",
@@ -36,7 +36,7 @@ const Rental = () => {
     },
     {
       id: nanoid(),
-      img: "",
+      img: shoeImg2,
       name: "Tent",
       description: "Enjoy camping under the stars",
       category: "camping",
@@ -46,7 +46,7 @@ const Rental = () => {
     },
     {
       id: nanoid(),
-      img: "",
+      img: shoeImg2,
       name: "Snowboard",
       description: "Hit the slopes with style",
       category: "snowboards",
@@ -54,8 +54,6 @@ const Rental = () => {
       totalCost: 0,
       brand: "Brand 8",
     },
-
-    // Add more products here
   ]);
 
   const handleAddToCart = (productId) => {
@@ -77,7 +75,7 @@ const Rental = () => {
           marginLeft: "10px",
           marginRight: "10px",
         }}
-        className="grid justify-center grid-cols-1 gap-7 sm:grid-cols-1 lg:grid-cols-5"
+        className="grid flex-wrap justify-center grid-cols-1 gap-7 sm:grid-cols-1 lg:grid-cols-5"
       >
         {products.map((product) => (
           <RCardComp
