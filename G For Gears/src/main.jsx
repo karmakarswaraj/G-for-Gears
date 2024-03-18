@@ -1,34 +1,32 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
+import { createRoot } from "react-dom";
 import App from "./App.jsx";
 import "./index.css";
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Body from "./components/Body.jsx";
 import Rental from "./components/Rental.jsx";
 import Collection from "./components/Collection.jsx";
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <App />,
-    children: [
-      {
-        path: "/",
-        element: <Body />,
-      },
-      {
-        path: "/rent",
-        element: <Rental />,
-      },
-      {
-        path: "/collection",
-        element: <Collection />,
-      },
-    ],
-  },
-]);
+import Gloves from "./components/Gloves.jsx";
+import Shoes from "./components/Shoes.jsx";
+import Helmet from "./components/Helmet.jsx";
+import Bag from "./components/Bag.jsx";
 
-ReactDOM.createRoot(document.getElementById("root")).render(
+const root = createRoot(document.getElementById("root"));
+
+root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<App />}>
+          <Route path="/" element={<Body />} />
+          <Route path="/rent" element={<Rental />} />
+          <Route path="/collection" element={<Collection />} />
+          <Route path="/gloves" element={<Gloves />} />
+          <Route path="/helmets" element={<Helmet />} />
+          <Route path="/shoes" element={<Shoes />} />
+          <Route path="/bags" element={<Bag />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );

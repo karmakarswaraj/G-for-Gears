@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import Logo from "../assets/Logo.png";
 
 export default function Header() {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
+
   return (
     <header className="sticky top-0 z-50 shadow">
       <nav className="border-gray-200 px-4 lg:px-6 py-2.5 bg-gray-900">
@@ -61,6 +67,8 @@ export default function Header() {
               <li className="relative">
                 <NavLink
                   to="/collection"
+                  onMouseEnter={toggleDropdown}
+                  onMouseLeave={toggleDropdown}
                   className={({ isActive }) =>
                     `block py-2 pr-4 pl-3 duration-200 ${
                       isActive ? "text-orange-700" : "text-white"
@@ -68,8 +76,43 @@ export default function Header() {
                   }
                 >
                   Collection
+                  {isDropdownOpen && (
+                    <ul className="absolute top-full left-0 bg-white shadow-md py-2">
+                      <li>
+                        <NavLink
+                          to="/gloves"
+                          className="block px-4 py-2 text-gray-800 hover:bg-orange-400"
+                        >
+                          Gloves
+                        </NavLink>
+                      </li>
+                      <li>
+                        <NavLink
+                          to="/shoes"
+                          className="block px-4 py-2 text-gray-800 hover:bg-orange-400"
+                        >
+                          Shoes
+                        </NavLink>
+                      </li>
+                      <li>
+                        <NavLink
+                          to="/helmets"
+                          className="block px-4 py-2 text-gray-800 hover:bg-orange-400"
+                        >
+                          Helmets
+                        </NavLink>
+                      </li>
+                      <li>
+                        <NavLink
+                          to="/backpacks"
+                          className="block px-4 py-2 text-gray-800 hover:bg-orange-400"
+                        >
+                          Backpacks
+                        </NavLink>
+                      </li>
+                    </ul>
+                  )}
                 </NavLink>
-                
               </li>
             </ul>
           </div>
