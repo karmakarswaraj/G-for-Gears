@@ -4,7 +4,7 @@ import "./index.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { createRoot } from 'react-dom/client';
 
-import {Body, Collection, Gloves, Helmets, Rental, Shoes, Bags } from "./components/index.js";
+import {Body, Collection, Gloves, Helmets, Rental, Shoes, Bags, Login, Signup, ForgotPassword } from "./components/index.js";
 
 const root = createRoot(document.getElementById("root"));
 
@@ -20,6 +20,9 @@ root.render(
           <Route path="/helmets" element={<Helmets />} />
           <Route path="/shoes" element={<Shoes />} />
           <Route path="/bags" element={<Bags />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/forgotpassword" element={<ForgotPassword />} />
         </Route>
       </Routes>
     </BrowserRouter>

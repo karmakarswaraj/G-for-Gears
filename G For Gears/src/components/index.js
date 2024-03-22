@@ -18,7 +18,10 @@ import Shoes from "../components/Items/Shoes";
 import Body from "../components/Pages/Body";
 import Collection from "../components/Pages/Collection";
 import Rental from "../components/Pages/Rental";
-//IMAGES IMPORT
+
+import Login from "../components/Pages/Login";
+import Signup from "../components/Pages/Signup";
+import ForgotPassword from "../components/Pages/ForgotPassword";
 
 export {
   Footer,
@@ -37,4 +40,7 @@ export {
   Body,
   Collection,
   Rental,
+  Login,
+  Signup,
+  ForgotPassword,
 };

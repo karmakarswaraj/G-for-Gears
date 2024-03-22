@@ -23,13 +23,13 @@ export default function Header() {
           </Link>
           <div className="flex items-center lg:order-2">
             <Link
-              to="#"
+              to="/login"
               className="text-white hover:bg-black font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none"
             >
               Log In
             </Link>
             <Link
-              to="#"
+              to="/signup"
               className="text-white bg-orange-700 hover:bg-orange-800 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none"
             >
               Sign Up
@@ -77,11 +77,11 @@ export default function Header() {
                 >
                   Collection
                   {isDropdownOpen && (
-                    <ul className="absolute left-0 py-2 bg-white shadow-md top-full">
+                    <ul className="absolute left-0 py-2 bg-gray-800 rounded-lg shadow-md top-full">
                       <li>
                         <NavLink
                           to="/gloves"
-                          className="block px-4 py-2 text-gray-800 hover:bg-orange-400"
+                          className="block px-4 py-2 text-white hover:bg-orange-600"
                         >
                           Gloves
                         </NavLink>
@@ -89,7 +89,7 @@ export default function Header() {
                       <li>
                         <NavLink
                           to="/shoes"
-                          className="block px-4 py-2 text-gray-800 hover:bg-orange-400"
+                          className="block px-4 py-2 text-white hover:bg-orange-600"
                         >
                           Shoes
                         </NavLink>
@@ -97,15 +97,15 @@ export default function Header() {
                       <li>
                         <NavLink
                           to="/helmets"
-                          className="block px-4 py-2 text-gray-800 hover:bg-orange-400"
+                          className="block px-4 py-2 text-white hover:bg-orange-600"
                         >
                           Helmets
                         </NavLink>
                       </li>
                       <li>
                         <NavLink
-                          to="/backpacks"
-                          className="block px-4 py-2 text-gray-800 hover:bg-orange-400"
+                          to="/bags"
+                          className="block px-4 py-2 text-white hover:bg-orange-600"
                         >
                           Backpacks
                         </NavLink>
