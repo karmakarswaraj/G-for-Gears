@@ -1,82 +1,84 @@
-import  { useState } from "react";
-import RCardComp from "../components/BodyComponent/RCardComp";
+import { RCardComp } from "../index.js";
 import { nanoid } from "nanoid";
-import shoeImg1 from "../assets/shoe1.png";
-import shoeImg2 from "../assets/shoe2.png";
-import shoeImg3 from "../assets/shoe3.png";
-import shoeImg4 from "../assets/shoe4.png";
-import shoeImg5 from "../assets/shoe5.png";
-import shoeImg6 from "../assets/shoe6.png";
-import shoeImg7 from "../assets/shoe7.png";
+import {
+  gloveImg1,
+  gloveImg2,
+  gloveImg3,
+  gloveImg4,
+  gloveImg5,
+  gloveImg6,
+  gloveImg7,
+} from "../../assets/imgIdx.js";
+import { useState } from "react";
 
-const Shoes = () => {
+const Gloves = () => {
   const [products, setProducts] = useState([
     {
       id: nanoid(),
-      img: shoeImg1,
-      name: "Winter Shoes",
+      img: gloveImg1,
+      name: "Winter Gloves",
       description: "Stay warm and comfortable on the slopes",
-      category: "Shoes",
+      category: "gloves",
       rentalCost: 5,
       totalCost: 0,
       brand: "Brand 1",
     },
     {
       id: nanoid(),
-      img: shoeImg2,
-      name: "Summer Shoes",
+      img: gloveImg2,
+      name: "Summer Gloves",
       description: "Lightweight and breathable for active use",
-      category: "Shoes",
+      category: "gloves",
       rentalCost: 3,
       totalCost: 0,
       brand: "Brand 2",
     },
     {
       id: nanoid(),
-      img: shoeImg3,
-      name: "Summer Shoes",
+      img: gloveImg3,
+      name: "Summer Gloves",
       description: "Lightweight and breathable for active use",
-      category: "Shoes",
+      category: "gloves",
       rentalCost: 3,
       totalCost: 0,
       brand: "Brand 2",
     },
     {
       id: nanoid(),
-      img: shoeImg4,
-      name: "Summer Shoes",
+      img: gloveImg4,
+      name: "Summer Gloves",
       description: "Lightweight and breathable for active use",
-      category: "Shoes",
+      category: "gloves",
       rentalCost: 3,
       totalCost: 0,
       brand: "Brand 2",
     },
     {
       id: nanoid(),
-      img: shoeImg5,
-      name: "Summer Shoes",
+      img: gloveImg5,
+      name: "Summer Gloves",
       description: "Lightweight and breathable for active use",
-      category: "Shoes",
+      category: "gloves",
       rentalCost: 3,
       totalCost: 0,
       brand: "Brand 2",
     },
     {
       id: nanoid(),
-      img: shoeImg6,
-      name: "Summer Shoes",
+      img: gloveImg6,
+      name: "Summer Gloves",
       description: "Lightweight and breathable for active use",
-      category: "Shoes",
+      category: "gloves",
       rentalCost: 3,
       totalCost: 0,
       brand: "Brand 2",
     },
     {
       id: nanoid(),
-      img: shoeImg7,
-      name: "Summer Shoes",
+      img: gloveImg7,
+      name: "Summer Gloves",
       description: "Lightweight and breathable for active use",
-      category: "Shoes",
+      category: "gloves",
       rentalCost: 3,
       totalCost: 0,
       brand: "Brand 2",
@@ -118,4 +120,4 @@ const Shoes = () => {
   );
 };
 
-export default Shoes;
+export default Gloves;

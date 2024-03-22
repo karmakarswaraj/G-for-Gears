@@ -1,5 +1,5 @@
 import React from "react";
-import bigImg from "../../assets/f5.png";
+import { bigImg } from "../../assets/imgIdx.js";
 
 function OnSale() {
   return (

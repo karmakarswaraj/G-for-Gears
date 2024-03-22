@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import RCardComp from "../components/BodyComponent/RCardComp"; // Import the Card component
 import { nanoid } from "nanoid";
-import shoeImg2 from "../assets/shoes2.png";
+import { RCardComp } from "../index.js";
+
+import { shoeImg2 } from "../../assets/imgIdx.js";
 const Rental = () => {
   const [products, setProducts] = useState([
     {

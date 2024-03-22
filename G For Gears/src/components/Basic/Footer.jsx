@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "../assets/Logo.png";
+import { Logo } from "../../assets/imgIdx.js";
 
 const Footer = () => {
   const links = [
@@ -80,7 +80,11 @@ const Footer = () => {
       <div className="container flex flex-wrap items-center justify-between mx-auto">
         <div className="flex items-center">
           <span className="mr-4 text-xl font-bold">G For Gears</span>
-          <img style={{ height: "50px", width: "50px", filter: "invert(100%)" }} src={Logo} alt="" />
+          <img
+            style={{ height: "50px", width: "50px", filter: "invert(100%)" }}
+            src={Logo}
+            alt=""
+          />
         </div>
         <nav className="flex-wrap hidden space-x-4 md:flex">
           {links.map((link, index) => (

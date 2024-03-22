@@ -1,13 +1,11 @@
 import React from "react";
-import bagImg from "../../assets/backpack2.png";
-import shoeImg from "../../assets/shoes2.png";
-import shoeImg2 from "../../assets/shoes3.png";
-import Cards from "./Cards";
+import { FshoeImg, FbagImg, FshoeImg2 } from "../../assets/imgIdx.js";
+import { Cards } from "../index.js";
 
 function Featured() {
   const products = [
     {
-      img: shoeImg,
+      img: FshoeImg,
       name: "Premium Luxury Product 1",
       brand: "Exclusive Brand 1",
       originalPrice: 140,
@@ -15,7 +13,7 @@ function Featured() {
       isNew: true,
     },
     {
-      img: bagImg,
+      img: FbagImg,
       name: "Premium Luxury Product 2",
       brand: "Exclusive Brand 2",
       originalPrice: 150,
@@ -23,7 +21,7 @@ function Featured() {
       isNew: false,
     },
     {
-      img: shoeImg2,
+      img: FshoeImg2,
       name: "Premium Luxury Product 3",
       brand: "Exclusive Brand 3",
       originalPrice: 160,
@@ -42,7 +40,7 @@ function Featured() {
       </h1>
       <div className="grid justify-center grid-cols-1 gap-7 sm:grid-cols-1 lg:grid-cols-3">
         {products.map((product, index) => (
-          <Cards key={index} product={product} /> 
+          <Cards key={index} product={product} />
         ))}
       </div>
     </div>

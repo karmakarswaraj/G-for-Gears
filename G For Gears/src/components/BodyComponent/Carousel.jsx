@@ -25,9 +25,7 @@ const Carousel = ({ slides, interval }) => {
   return (
     <div className="carousel">
       <div className="carousel-container">
-        <div className="carousel-sales-banner">
-          {/* Your sales banner content */}
-        </div>
+        <div className="carousel-sales-banner"></div>
         <div className="carousel-slides">
           {slides.map((slide, index) => (
             <div
@@ -42,7 +40,7 @@ const Carousel = ({ slides, interval }) => {
                   alt={slide.alt}
                   style={{ display: "block" }}
                   className="w-full"
-                /> // Center image
+                />
               ) : (
                 <div dangerouslySetInnerHTML={{ __html: slide.content }} />
               )}

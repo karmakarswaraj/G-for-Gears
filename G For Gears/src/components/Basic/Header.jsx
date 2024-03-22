@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import Logo from "../assets/Logo.png";
+import { Logo } from "../../assets/imgIdx.js";
 
 export default function Header() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -77,7 +77,7 @@ export default function Header() {
                 >
                   Collection
                   {isDropdownOpen && (
-                    <ul className="absolute top-full left-0 bg-white shadow-md py-2">
+                    <ul className="absolute left-0 py-2 bg-white shadow-md top-full">
                       <li>
                         <NavLink
                           to="/gloves"
