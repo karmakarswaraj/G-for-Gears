@@ -22,7 +22,8 @@ import Rental from "../components/Pages/Rental";
 import Login from "../components/Pages/Login";
 import Signup from "../components/Pages/Signup";
 import ForgotPassword from "../components/Pages/ForgotPassword";
-
+import Cart from "../components/BodyComponent/Cart";
+import Wishlist from "../components/BodyComponent/Wishlist";
 export {
   Footer,
   Header,
@@ -43,4 +44,6 @@ export {
   Login,
   Signup,
   ForgotPassword,
+  Cart,
+  Wishlist,
 };

@@ -4,13 +4,21 @@ const SignUpForm = () => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  // const [signedUp, setSignedUp] = useState(false); 
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    
   };
+  
+
 
   return (
-    <div id="sign" className="container px-4 mx-auto" style={{height: "86vh"}}>
+    <div
+      id="sign"
+      className="container px-4 mx-auto"
+      style={{ minHeight: "86vh" }}
+    >
       <div className="flex items-center content-center justify-center h-full">
         <div className="w-full px-4 lg:w-4/12">
           <div className="relative flex flex-col w-full min-w-0 mb-6 break-words bg-gray-300 border-0 rounded-lg shadow-lg">
