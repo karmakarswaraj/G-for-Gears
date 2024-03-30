@@ -24,6 +24,8 @@ import Signup from "../components/Pages/Signup";
 import ForgotPassword from "../components/Pages/ForgotPassword";
 import Cart from "../components/BodyComponent/Cart";
 import Wishlist from "../components/BodyComponent/Wishlist";
+
+import Admin from "../components/Pages/Admin";
 export {
   Footer,
   Header,
@@ -46,4 +48,5 @@ export {
   ForgotPassword,
   Cart,
   Wishlist,
+  Admin,
 };

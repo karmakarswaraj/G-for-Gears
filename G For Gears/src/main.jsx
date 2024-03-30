@@ -18,7 +18,8 @@ import {
   Signup,
   ForgotPassword,
   Cart,
-  Wishlist
+  Wishlist,
+  Admin,
 } from "./components/index.js";
 
 const root = createRoot(document.getElementById("root"));
@@ -47,6 +48,7 @@ root.render(
 
           <Route path="/cart" element={<Cart />} />
           <Route path="/wishlist" element={<Wishlist />} />
+          <Route path="/admin" element={<Admin />} />
         </Route>
       </Routes>
     </BrowserRouter>

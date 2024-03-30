@@ -116,7 +116,7 @@ export default function Header() {
             )}
             {isAuthenticated && (
               <NavLink
-                to="/profile"
+                to="/admin"
                 className="relative inline-block text-left cursor-pointer"
                 onClick={handleToggleDropdown}
               >

@@ -42,6 +42,9 @@ import backpackImg from "./backpack.png";
 import FbagImg from "./backpack2.png";
 import FshoeImg from "./shoes2.png";
 import FshoeImg2 from "./shoes3.png";
+
+
+
 export {
   BagImg1,
   BagImg2,
@@ -84,4 +87,5 @@ export {
   FbagImg,
   FshoeImg,
   FshoeImg2,
+  
 };
