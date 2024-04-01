@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { Logo } from "../../assets/imgIdx.js";
 import { useAuth0 } from "@auth0/auth0-react";
+import { useSelector } from "react-redux";
+
 export default function Header() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [profileDropdownOpen, setProfileDropdownOpen] = useState(false);
@@ -20,6 +22,8 @@ export default function Header() {
   if (user && user.name && user.name.includes("@")) {
     username = user.name.split("@")[0];
   }
+
+  const cartProducts = useSelector(state => state.cart.length);
 
   return (
     <header className="sticky top-0 z-50 shadow">
@@ -63,54 +67,60 @@ export default function Header() {
             {isAuthenticated && (
               //CART
               <div>
-                <NavLink
-                  to="/cart"
-                  className="block text-white rounded-lg "
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    width="26"
-                    height="26"
-                    color="#ffffff"
-                    fill="none"
-                    transform="scale(-1, 1)"
-                    className="svg-hover"
-                  >
-                    <path
-                      d="M8 16H15.2632C19.7508 16 20.4333 13.1808 21.261 9.06908C21.4998 7.88311 21.6192 7.29013 21.3321 6.89507C21.045 6.5 20.4947 6.5 19.3941 6.5H6"
-                      stroke="currentColor"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                    />
-                    <path
-                      d="M8 16L5.37873 3.51493C5.15615 2.62459 4.35618 2 3.43845 2H2.5"
-                      stroke="currentColor"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                    />
-                    <path
-                      d="M8.88 16H8.46857C7.10522 16 6 17.1513 6 18.5714C6 18.8081 6.1842 19 6.41143 19H17.5"
-                      stroke="currentColor"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                    <circle
-                      cx="10.5"
-                      cy="20.5"
-                      r="1.5"
-                      stroke="currentColor"
-                      strokeWidth="1.5"
-                    />
-                    <circle
-                      cx="17.5"
-                      cy="20.5"
-                      r="1.5"
-                      stroke="currentColor"
-                      strokeWidth="1.5"
-                    />
-                  </svg>
+                <NavLink to="/cart" className="block text-white rounded-lg ">
+                <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    width="26"
+    height="26"
+    color="#ffffff"
+    fill="none"
+    transform="scale(-1, 1)"
+    class="svg-hover"
+>
+    <path
+        d="M8 16H15.2632C19.7508 16 20.4333 13.1808 21.261 9.06908C21.4998 7.88311 21.6192 7.29013 21.3321 6.89507C21.045 6.5 20.4947 6.5 19.3941 6.5H6"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+    />
+    <path
+        d="M8 16L5.37873 3.51493C5.15615 2.62459 4.35618 2 3.43845 2H2.5"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+    />
+    <path
+        d="M8.88 16H8.46857C7.10522 16 6 17.1513 6 18.5714C6 18.8081 6.1842 19 6.41143 19H17.5"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+    />
+    <circle
+        cx="10.5"
+        cy="20.5"
+        r="1.5"
+        stroke="currentColor"
+        strokeWidth="1.5"
+    />
+    <circle
+        cx="17.5"
+        cy="20.5"
+        r="1.5"
+        stroke="currentColor"
+        strokeWidth="1.5"
+    />
+    <circle
+        cx="17.5"
+        cy="20.5"
+        r="1.5"
+        stroke="currentColor"
+        strokeWidth="1.5"
+    />
+    <text x="-14" y="12" font-size="8" text-anchor="middle" font-weight="bold" fill="white" dominantBaseline="middle" transform="scale(-1, 1)">{cartProducts}</text>
+</svg>
+
                 </NavLink>
               </div>
             )}

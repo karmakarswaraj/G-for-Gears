@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-
+import {useDispatch } from "react-redux";
+import {addToCart} from "../../store/cartSlice.js"
 const RCardComp = ({ product }) => {
   const [quantity, setQuantity] = useState(1);
   const decreaseQuantity = () => {
@@ -13,6 +14,11 @@ const RCardComp = ({ product }) => {
     // You can set a maximum limit if needed
     setQuantity(quantity + 1);
   };
+
+  const dispatch = useDispatch();
+  const addCart = (product) =>{
+    dispatch(addToCart(product));
+  }
   return (
     <div
       className="w-[350px] rounded-md justify-center p-4 mx-1"
@@ -132,8 +138,9 @@ const RCardComp = ({ product }) => {
         <button
           type="button"
           className="mt-4 w-full rounded-sm bg-orange-700 px-2 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-orange-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+          onClick={() => addCart(product)}
         >
-          Add For Rent
+          Add to cart
         </button>
       </div>
     </div>

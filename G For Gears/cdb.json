@@ -1,0 +1,89 @@
+{
+    
+  
+    "bags" : [
+        {
+            "id": 1,
+            
+            "name": "Winter Bag",
+            "description": "Stay warm and comfortable on the slopes",
+            "category": "Bag",
+            "rentalCost": 5,
+            "totalCost": 0,
+            "brand": "Brand 1"
+          },
+          {
+            "id": 2,
+            
+            "name": "Summer Bag",
+            "description": "Lightweight and breathable for active use",
+            "category": "Bag",
+            "rentalCost": 3,
+            "totalCost": 0,
+            "brand": "Brand 2"
+          }
+         
+    ],
+    "gloves": [
+        {
+            "id": 1,
+            
+            "name": "Winter Gloves",
+            "description": "Stay warm and comfortable on the slopes",
+            "category": "gloves",
+            "rentalCost": 5,
+            "totalCost": 0,
+            "brand": "Brand 1"
+          },
+          {
+            "id": 2,
+            
+            "name": "Summer Gloves",
+            "description": "Lightweight and breathable for active use",
+            "category": "gloves",
+            "rentalCost": 3,
+            "totalCost": 0,
+            "brand": "Brand 2"
+          }
+    ],
+    "shoes": [
+        {
+            "id": 1,
+            "name": "Winter Shoes",
+            "description": "Stay warm and comfortable on the slopes",
+            "category": "Shoes",
+            "rentalCost": 5,
+            "totalCost": 0,
+            "brand": "Brand 1"
+          },
+          {
+            "id": 2,
+            "name": "Summer Shoes",
+            "description": "Lightweight and breathable for active use",
+            "category": "Shoes",
+            "rentalCost": 3,
+            "totalCost": 0,
+            "brand": "Brand 2"
+          } 
+    ],
+    "helmet": [
+        {
+            "id": 1,
+            "name": "Winter Helmet",
+            "description": "Stay warm and comfortable on the slopes",
+            "category": "Helmet",
+            "rentalCost": 5,
+            "totalCost": 0,
+            "brand": "Brand 1"
+          },
+          {
+            "id": 2,
+            "name": "Summer Helmet",
+            "description": "Lightweight and breathable for active use",
+            "category": "Helmet",
+            "rentalCost": 3,
+            "totalCost": 0,
+            "brand": "Brand 2"
+          }
+    ]
+}

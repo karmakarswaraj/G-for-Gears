@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { RCardComp } from "../index.js";
 import { nanoid } from "nanoid";
 import {
@@ -11,78 +11,21 @@ import {
   helmetImg7,
 } from "../../assets/imgIdx.js";
 const Helmets = () => {
-  const [products, setProducts] = useState([
-    {
-      id: nanoid(),
-      img: helmetImg1,
-      name: "Winter Helmet",
-      description: "Stay warm and comfortable on the slopes",
-      category: "Helmet",
-      rentalCost: 5,
-      totalCost: 0,
-      brand: "Brand 1",
-    },
-    {
-      id: nanoid(),
-      img: helmetImg2,
-      name: "Summer Helmet",
-      description: "Lightweight and breathable for active use",
-      category: "Helmet",
-      rentalCost: 3,
-      totalCost: 0,
-      brand: "Brand 2",
-    },
-    {
-      id: nanoid(),
-      img: helmetImg3,
-      name: "Summer Helmet",
-      description: "Lightweight and breathable for active use",
-      category: "Helmet",
-      rentalCost: 3,
-      totalCost: 0,
-      brand: "Brand 2",
-    },
-    {
-      id: nanoid(),
-      img: helmetImg4,
-      name: "Summer Helmet",
-      description: "Lightweight and breathable for active use",
-      category: "Helmet",
-      rentalCost: 3,
-      totalCost: 0,
-      brand: "Brand 2",
-    },
-    {
-      id: nanoid(),
-      img: helmetImg5,
-      name: "Summer Helmet",
-      description: "Lightweight and breathable for active use",
-      category: "Helmet",
-      rentalCost: 3,
-      totalCost: 0,
-      brand: "Brand 2",
-    },
-    {
-      id: nanoid(),
-      img: helmetImg6,
-      name: "Summer Helmet",
-      description: "Lightweight and breathable for active use",
-      category: "Helmet",
-      rentalCost: 3,
-      totalCost: 0,
-      brand: "Brand 2",
-    },
-    {
-      id: nanoid(),
-      img: helmetImg7,
-      name: "Summer Helmet",
-      description: "Lightweight and breathable for active use",
-      category: "Helmet",
-      rentalCost: 3,
-      totalCost: 0,
-      brand: "Brand 2",
-    },
-  ]);
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch("http://localhost:3000/helmet");
+        const data = await response.json();
+        setProducts(data);
+      } catch (error) {
+        console.error("Error fetching products:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   const handleAddToCart = (productId) => {
     const updatedProducts = products.map((product) =>
@@ -94,7 +37,7 @@ const Helmets = () => {
   };
 
   return (
-    <div style={{ minHeight: "84vh" }}>
+    <div >
       <div
         style={{
           marginTop: "20px",

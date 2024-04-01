@@ -1,9 +1,7 @@
 import React from "react";
 
 const Admin = () => {
-  const handleBoxClick = (text) => {
-    // console.log(${text} clicked);
-  };
+
 
   return (
     <div className="flex flex-wrap justify-center">

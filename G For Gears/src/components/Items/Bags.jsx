@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import { RCardComp } from "../index.js";
 import { nanoid } from "nanoid";
 import {
@@ -12,78 +12,22 @@ import {
 } from "../../assets/imgIdx.js";
 
 const Bags = () => {
-  const [products, setProducts] = useState([
-    {
-      id: nanoid(),
-      img: BagImg1,
-      name: "Winter Bag",
-      description: "Stay warm and comfortable on the slopes",
-      category: "Bag",
-      rentalCost: 5,
-      totalCost: 0,
-      brand: "Brand 1",
-    },
-    {
-      id: nanoid(),
-      img: BagImg2,
-      name: "Summer Bag",
-      description: "Lightweight and breathable for active use",
-      category: "Bag",
-      rentalCost: 3,
-      totalCost: 0,
-      brand: "Brand 2",
-    },
-    {
-      id: nanoid(),
-      img: BagImg3,
-      name: "Summer Bag",
-      description: "Lightweight and breathable for active use",
-      category: "Bag",
-      rentalCost: 3,
-      totalCost: 0,
-      brand: "Brand 2",
-    },
-    {
-      id: nanoid(),
-      img: BagImg4,
-      name: "Summer Bag",
-      description: "Lightweight and breathable for active use",
-      category: "Bag",
-      rentalCost: 3,
-      totalCost: 0,
-      brand: "Brand 2",
-    },
-    {
-      id: nanoid(),
-      img: BagImg5,
-      name: "Summer Bag",
-      description: "Lightweight and breathable for active use",
-      category: "Bag",
-      rentalCost: 3,
-      totalCost: 0,
-      brand: "Brand 2",
-    },
-    {
-      id: nanoid(),
-      img: BagImg6,
-      name: "Summer Bag",
-      description: "Lightweight and breathable for active use",
-      category: "Bag",
-      rentalCost: 3,
-      totalCost: 0,
-      brand: "Brand 2",
-    },
-    {
-      id: nanoid(),
-      img: BagImg7,
-      name: "Summer Bag",
-      description: "Lightweight and breathable for active use",
-      category: "Bag",
-      rentalCost: 3,
-      totalCost: 0,
-      brand: "Brand 2",
-    },
-  ]);
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('http://localhost:3000/bags'); 
+        const data = await response.json();
+        setProducts(data);
+      } catch (error) {
+        console.error('Error fetching products:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
 
   const handleAddToCart = (productId) => {
     const updatedProducts = products.map((product) =>
@@ -95,7 +39,7 @@ const Bags = () => {
   };
 
   return (
-    <div style={{ minHeight: "84vh" }}>
+    <div >
       <div
         style={{
           marginTop: "20px",

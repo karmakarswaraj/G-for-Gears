@@ -1,4 +1,5 @@
 import { RCardComp } from "../index.js";
+import { useState, useEffect } from "react";
 import { nanoid } from "nanoid";
 import {
   gloveImg1,
@@ -9,81 +10,23 @@ import {
   gloveImg6,
   gloveImg7,
 } from "../../assets/imgIdx.js";
-import { useState } from "react";
 
 const Gloves = () => {
-  const [products, setProducts] = useState([
-    {
-      id: nanoid(),
-      img: gloveImg1,
-      name: "Winter Gloves",
-      description: "Stay warm and comfortable on the slopes",
-      category: "gloves",
-      rentalCost: 5,
-      totalCost: 0,
-      brand: "Brand 1",
-    },
-    {
-      id: nanoid(),
-      img: gloveImg2,
-      name: "Summer Gloves",
-      description: "Lightweight and breathable for active use",
-      category: "gloves",
-      rentalCost: 3,
-      totalCost: 0,
-      brand: "Brand 2",
-    },
-    {
-      id: nanoid(),
-      img: gloveImg3,
-      name: "Summer Gloves",
-      description: "Lightweight and breathable for active use",
-      category: "gloves",
-      rentalCost: 3,
-      totalCost: 0,
-      brand: "Brand 2",
-    },
-    {
-      id: nanoid(),
-      img: gloveImg4,
-      name: "Summer Gloves",
-      description: "Lightweight and breathable for active use",
-      category: "gloves",
-      rentalCost: 3,
-      totalCost: 0,
-      brand: "Brand 2",
-    },
-    {
-      id: nanoid(),
-      img: gloveImg5,
-      name: "Summer Gloves",
-      description: "Lightweight and breathable for active use",
-      category: "gloves",
-      rentalCost: 3,
-      totalCost: 0,
-      brand: "Brand 2",
-    },
-    {
-      id: nanoid(),
-      img: gloveImg6,
-      name: "Summer Gloves",
-      description: "Lightweight and breathable for active use",
-      category: "gloves",
-      rentalCost: 3,
-      totalCost: 0,
-      brand: "Brand 2",
-    },
-    {
-      id: nanoid(),
-      img: gloveImg7,
-      name: "Summer Gloves",
-      description: "Lightweight and breathable for active use",
-      category: "gloves",
-      rentalCost: 3,
-      totalCost: 0,
-      brand: "Brand 2",
-    },
-  ]);
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch("http://localhost:3000/gloves");
+        const data = await response.json();
+        setProducts(data);
+      } catch (error) {
+        console.error("Error fetching products:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   const handleAddToCart = (productId) => {
     const updatedProducts = products.map((product) =>
@@ -95,7 +38,7 @@ const Gloves = () => {
   };
 
   return (
-    <div style={{ minHeight: "84vh" }}>
+    <div >
       <div
         style={{
           marginTop: "20px",
